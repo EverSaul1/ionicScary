@@ -1,0 +1,7 @@
+{
+  "name": "scaryfron",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
