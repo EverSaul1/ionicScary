@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { Categoria, List } from 'src/app/interface/categoria-interface';
 
@@ -19,5 +19,18 @@ export class CategoriaServicesService {
   getCategory():Observable<List[]>{
     const url = `${this.apiUrl}/category`;
     return this._http.get<List[]>(url);
+  }
+
+  //TRAER HISTORIAS
+
+  getHistorias(idCategoria: string, nameHistory: string):Observable<any[]>{
+
+    const params = new HttpParams()
+      .set('category', idCategoria)
+      .set('nameHistory', nameHistory);
+    const url = `${this.apiUrl}/show ${params}`;
+
+    return this._http.get<any[]>(url);
+
   }
 }
