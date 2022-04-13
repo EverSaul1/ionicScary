@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { Categoria, List } from 'src/app/interface/categoria-interface';
+import {Historia} from "../../interface/historia.interface";
 
 
 @Injectable({
@@ -16,21 +17,21 @@ export class CategoriaServicesService {
 
   //TRAER CATEGORIAS
 
-  getCategory():Observable<List[]>{
+  getCategory(): Observable<List[]>{
     const url = `${this.apiUrl}/category`;
     return this._http.get<List[]>(url);
   }
 
   //TRAER HISTORIAS
 
-  getHistorias(idCategoria: string, nameHistory: string):Observable<any[]>{
+  getHistorias(idCat: string): Observable<Historia[]>{
 
     const params = new HttpParams()
-      .set('category', idCategoria)
-      .set('nameHistory', nameHistory);
-    const url = `${this.apiUrl}/show ${params}`;
+      .set('category', idCat)
+      .set('nameHistory', '');
+    const url = (`${this.apiUrl}/history/show/`);
 
-    return this._http.get<any[]>(url);
+    return this._http.get<Historia[]>(url, {params});
 
   }
 }
