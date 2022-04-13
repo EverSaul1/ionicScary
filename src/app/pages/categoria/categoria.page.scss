@@ -1,15 +1,16 @@
 .heding{
-    color: var(--ion-color-success-shade);
+    color: rgb(241, 241, 241);
     position: absolute;
     top: 40%;
     width: 100%;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'snap itc', cursive;
-    font-size: 38px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
     hyphens: auto;
-    text-shadow:  0 0 10px rgb(0, 0, 0);
+    text-shadow:  0 0 15px rgb(255, 255, 255);
+    //-webkit-text-stroke: 1px rgb(233, 233, 233);
     
 }
 
@@ -22,8 +23,8 @@
 }
 .banner img{
     width: 100%;
-    height: 270px;
-    opacity: 1;
+    height: 200px;
+    opacity: 0.3;
     object-fit: cover;
     margin-top: 10px;
     border-radius: 10px;
