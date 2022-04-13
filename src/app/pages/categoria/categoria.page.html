@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>categoria</ion-title>
+    <ion-buttons slot="end">
+      <app-popover></app-popover>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let items of categoryArr">
+    <ion-item class="banner" (click)="modalCategoria(items)">
+        <img src="{{items.imageCategory}}"  alt="">
+          <h2 class="heding">{{items.nameCategory}}</h2>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

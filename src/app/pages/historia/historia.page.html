@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="cerrarModal()">
+      <ion-icon name="arrow-back" style="zoom:1.5;"></ion-icon>
+    </ion-buttons>
+    <ion-title slot="start">{{nameCategory}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    {{idCategory|json}}
+    <ion-item>
+      <ion-thumbnail slot="end">
+       <img src="#" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Lorem ipsum</h3>
+        <p>dolor sit amet</p>
+        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
