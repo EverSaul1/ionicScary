@@ -13,6 +13,7 @@ export class CategoriaPage implements OnInit {
 
   hayError = false;
   categoryArr: List[] = [];
+  text = ''
 
   constructor(
     private categoryService: CategoriaServicesService,
@@ -49,8 +50,7 @@ export class CategoriaPage implements OnInit {
 
   }
 buscar(event: any){
-
-  console.log(event)
+  this.text = event.detail.value
 
 }
 
