@@ -5,13 +5,14 @@
       <app-popover></app-popover>
     </ion-buttons>
   </ion-toolbar>
+  <ion-searchbar animated autocorrect="off" (ionChange)="buscar($event)" color="danger"></ion-searchbar>
 
 
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let items of categoryArr">
-    <ion-item class="banner" (click)="modalCategoria(items)">
+  <ion-list >
+    <ion-item *ngFor="let items of categoryArr | filtro: text: 'nameCategory'" class="banner" (click)="modalCategoria(items)">
         <img src="{{items.imageCategory}}"  alt="">
           <h2 class="heding">{{items.nameCategory}}</h2>
     </ion-item>

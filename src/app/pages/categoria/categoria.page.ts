@@ -48,7 +48,11 @@ export class CategoriaPage implements OnInit {
     await modal.present();
 
   }
+buscar(event: any){
 
+  console.log(event)
+
+}
 
 
 }
