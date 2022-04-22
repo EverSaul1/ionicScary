@@ -8,6 +8,8 @@ import { HistoriaPageRoutingModule } from './historia-routing.module';
 
 import { HistoriaPage } from './historia.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import {HistoriaIdPageModule} from "../historia-id/historia-id.module";
+import {PipesModule} from "../../pipes/pipes.module";
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     HistoriaPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    HistoriaIdPageModule,
+    PipesModule
   ],
   declarations: [HistoriaPage]
 })

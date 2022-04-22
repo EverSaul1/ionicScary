@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="cerrarModal()">
+      <ion-icon name="arrow-back" style="zoom:1.5;"></ion-icon>
+    </ion-buttons>
+    <ion-title>comentarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div>
+    <ion-label>
+      <h1>{{comment}}</h1>
+      <h2> COMENTARIOS</h2>
+    </ion-label>
+  </div>
+  <div >
+    <ion-list >
+
+      <ion-item *ngFor="let items of data">
+        <ion-avatar slot="start">
+          <img src="#" />
+        </ion-avatar>
+        <ion-label>
+          <h2 style="text-transform: uppercase">{{items.usuario.name}}</h2>
+          <h3>{{items.dateComment | date: "d 'de' MMMM 'del' y"}}</h3>
+          <p>{{items.comment}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div>
+    <form [formGroup]="profileForm">
+      <ion-input formControlName="comentario" placeholder="Agregar Comentario..."></ion-input>
+      <ion-button color="primary" (click)="enviarSMS()">Primary</ion-button>
+    </form>
+
+  </div>
+
+
+
+</ion-content>

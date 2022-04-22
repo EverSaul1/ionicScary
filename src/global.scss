@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.ios ion-modal{
+  --width:100%;
+  --height:100%
+}
+.md ion-modal{
+  --width:100%;
+  --height:100%
+}
+*{
+  --width:80%;
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="retrocederModal()">
+      <ion-icon name="arrow-back" style="zoom:1.5;"></ion-icon>
+    </ion-buttons>
+    <ion-title style="text-transform: uppercase">{{items.nameHistory}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen = "true">
+  <ion-card>
+    <img width="100%" src="{{items.imagesHistory}}" />
+    <ion-card-header>
+      <ion-card-title>{{items.nameHistory}}</ion-card-title>
+      <div style="display: flex; justify-content: end; flex-direction: row">
+        <ion-icon  name="chatbox" style="margin-right: 5px; color: red"></ion-icon>
+        <label style="margin-top: -2px">{{count.countCommentHistory}}</label>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      {{items.history}}
+    </ion-card-content>
+  </ion-card>
+  <br> <br>
+
+  <ion-button expand="full" color="danger" fill="outline" *ngIf="count.countCommentHistory >= 1" (click)="getComentarios(count)">LEER {{count.countCommentHistory}} COMENTARIOS</ion-button>
+  <ion-button expand="full" color="danger" fill="outline" *ngIf="count.countCommentHistory === 0" (click)="getComentarios(count)">NO TIENE COMENTARIOS</ion-button>
+
+
+</ion-content>

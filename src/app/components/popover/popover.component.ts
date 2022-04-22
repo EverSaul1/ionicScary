@@ -20,10 +20,10 @@ export class PopoverComponent implements OnInit {
       event: ev,
       translucent: true,
       animated:true,
-      mode:"ios"
+      mode: "ios"
     });
     await popover.present();
-  
+
     const { role } = await popover.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }

@@ -38,6 +38,7 @@ export class CategoriaPage implements OnInit {
   async modalCategoria(items: any){
 
     const modal = await this.modalControl.create({
+      cssClass: 'fullscreen',
       component: HistoriaPage,
       componentProps: {
         idCategory: items._id,

@@ -1,37 +1,43 @@
-
 <ion-header>
   <ion-toolbar>
-    <ion-title>categoria</ion-title>
-    
+    <ion-title style="align-items: start">PERFIL</ion-title>
   </ion-toolbar>
-  
 
 </ion-header>
 
 <ion-content>
-  <ion-list>   
-    <ion-item >
-      <ion-thumbnail slot="end">
-       <img src="#" />
-      </ion-thumbnail>
+  <ion-list>
+    <ion-item (click)="modalUsuario()">
+      <ion-avatar slot="start">
+        <img src="#" />
+      </ion-avatar>
       <ion-label>
-        <h3>Lorem ipsum</h3>
-        <p>dolor sit amet</p>
-        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+        <h2>Nombre Usuario</h2>
+        <p>ever@gmail.com</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="#" />
+      </ion-avatar>
+      <ion-label>
+        <h2>POLITICA DE PRIVACIDAD</h2>
+        <p>TERMINOS Y POLITICAS DE LA APP</p>
       </ion-label>
     </ion-item>
     <ion-item>
-      <ion-thumbnail slot="end">
-        <img src="#" />
-      </ion-thumbnail>
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png" />
+      </ion-avatar>
       <ion-label>
-        <h3>Lorem ipsum</h3>
-        <p>dolor sit amet</p>
-        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+        <h2>ACERCA</h2>
+        <p>VERSION, COPYRIGHT</p>
       </ion-label>
     </ion-item>
   </ion-list>
+  <ion-button expand="block" fill="outline" color="danger" mode="ios" size="small">SALIR</ion-button>
 
-  
+
 </ion-content>
 

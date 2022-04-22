@@ -5,19 +5,27 @@
     </ion-buttons>
     <ion-title slot="start">{{nameCategory}}</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <!--<input (keyup.enter)=" traerHistorias() " #txtBuscar>-->
+    <ion-searchbar animated autocorrect="off" (ionChange)="buscar($event)" color="danger"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    {{idCategory|json}}
-    <ion-item>
-      <ion-thumbnail slot="end">
-       <img src="#" />
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list >
+
+    <ion-item *ngFor="let items of historia | filtro: textoBuscar: 'nameHistory'" (click)="ingresarHistoria(items)" id="hola" >
+      <ion-thumbnail slot="start">
+       <img src="{{items.imagesHistory}}" />
       </ion-thumbnail>
       <ion-label>
-        <h3>Lorem ipsum</h3>
-        <p>dolor sit amet</p>
-        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+        <h3 id="nameHistori">{{items.nameHistory}}</h3>
+        <p class="date"> Fecha creación: {{items.dateHistory | date : 'shortDate'}}</p>
+        <p>{{items.descriptionHistory}}</p>
       </ion-label>
     </ion-item>
   </ion-list>

@@ -1,0 +1,25 @@
+<ion-content>
+  <form [formGroup]= "formLogin" >
+    <div>
+      <ion-item>
+        <ion-label position="stacked">Usuario:</ion-label>
+        <ion-input
+          type="text"
+          placeholder="Ingrese su usuario"
+          formControlName="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña:</ion-label>
+        <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password"></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button expand="full" fill="solid" color="primary" (click)="login()">ingresar</ion-button>
+
+  </form>
+
+  <ion-label>
+    <h5>Registrarse</h5>
+  </ion-label>
+
+</ion-content>
